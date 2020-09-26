@@ -68,6 +68,6 @@ interface SleepDatabaseDao {
      * Selects and returns the latest night.
      */
     @Query("SELECT * FROM daily_sleep_quality_table ORDER BY nightId DESC LIMIT 1")
-    suspend fun getTonight(): SleepNight?
+    fun getTonight(): SleepNight?
 
 }
