@@ -46,7 +46,7 @@ interface SleepDatabaseDao {
      * @param key nightId to match
      */
     @Query("SELECT * from daily_sleep_quality_table WHERE nightId = :key")
-    fun get(key: Long): SleepNight?
+    suspend fun get(key: Long): SleepNight?
 
     /**
      * Deletes all values from the table.
